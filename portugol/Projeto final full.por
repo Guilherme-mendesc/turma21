@@ -2,6 +2,7 @@ programa
 {
 
 	inclua biblioteca Util
+	inclua biblioteca Matematica --> mat
 	
 	funcao inicio()
 	{
@@ -107,7 +108,7 @@ programa
 		}
 	
 
-	funcao basico() {
+funcao basico() {
 		real nota[10]
 		inteiro diaHoje=0
 		inteiro mesAniversario=0
@@ -116,8 +117,14 @@ programa
 		real somaNotas=0.0
 		real notaFinal=0.0
 		inteiro mesHoje=0
-		
-            	escreva("Dream Team G1, seu futuro como prioridade\n")
+		inteiro matricula=0
+		cadeia cpf=" "
+		cadeia status=" "
+
+			imprimeDadosEscola()
+            	obterDadosEstudante(matricula,cpf,status) 
+            	
+            	
 			escreva("Que dia você faz aniversário? Escreva somente o número do dia \n")
 			leia(diaAniversario)
 			escreva("Hoje é qual dia do mês? \n")
@@ -126,16 +133,31 @@ programa
 			para(inteiro x=0;x<10;x++){		
 				tela2(nota, x)
 				somaNotas=somarNotas(nota)
+				caracter resposta= ' '
 				
-					se(diaAniversario==diaHoje){
-						notaComBonus=(somaNotas*1.1)
-						escreva("É seu aniversário! Sua pontuação teve um acréscimo de 10% e agora é:"+notaComBonus)		
-					}
-					senao{
-						escreva("A nota final é:"+somaNotas)
-					}			
+				se(x<9){
+					escreva("Deseja continuar? S-sim; N-não\n")
+					leia(resposta)
+				}
+				se(x==9  ou (resposta =='n' ou resposta =='N') ){
+						se(diaAniversario==diaHoje){
+						notaComBonus=mat.arredondar((somaNotas*1.1),2)
+						escreva("É seu aniversário! Sua pontuação teve um acréscimo de 10% e agora é:"+notaComBonus+"\n")
+						adicionarNota(nota,x,notaComBonus)		
+						}
+						senao{
+							escreva("A nota final é "+somaNotas+"\n")
+						}
+						pare			
+				
+					
+					
 		}
+			}
 	}
+
+
+
 
 
 	funcao medio() {
@@ -193,12 +215,7 @@ programa
 
 	}
 
-	
-	
-	funcao graduacao() {
-
-		
-		 	
+funcao graduacao() {	
 		
 			caracter movimento = ' '
 			real valorMovimento = 0.0
@@ -212,10 +229,12 @@ programa
 			cadeia status = ""
 			caracter continuar
 			imprimeDadosEscola() 
+			escreva("\n\nENSINO GRADUAÇÃO")
 		 	obterDadosEstudante(matricula, cpf,status)
 		 	
 			para(inteiro x=0; x<10; x++){
 				imprimeDadosEscola()
+				escreva("\n\nENSINO GRADUAÇÃO")
 				imprimeDadosEstudante(matricula, cpf,status)
 				
 			somaNotas = somarNotas(notas)
@@ -259,7 +278,11 @@ programa
 				pare
 			}		
 		}
-			}
+		imprimeDadosEscola()
+		escreva("\n\nENSINO GRADUAÇÃO")
+		imprimeDadosEstudante(matricula, cpf, status)
+		escreva("\nNota final: ", somarNotas(notas))
+	}
 
 
 	funcao pos() {
@@ -317,11 +340,13 @@ programa
 		caracter creditoCondicao
 		
 		imprimeDadosEscola()
+		escreva("\n\nENSINO MESTRADO")
 		obterDadosEstudante(matricula, cpf, status)
 		
 		
 		para (inteiro x=0; x<10; x++){
 			imprimeDadosEscola()
+			escreva("\n\nENSINO MESTRADO")
 			imprimeDadosEstudante(matricula, cpf, status)
 			tela2(notas, x)
 			escreva("Continuar S/N: ")
@@ -342,6 +367,10 @@ programa
 				pare
 			}
 		}
+		imprimeDadosEscola()
+		escreva("\n\nENSINO MESTRADO")
+		imprimeDadosEstudante(matricula, cpf, status)
+		escreva("\nNota final: ", somarNotas(notas))
 	}
 	
 	funcao adicionarNota(real notas[], inteiro posicao, real valorParaAdicionar) {
@@ -368,7 +397,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5718; 
+ * @POSICAO-CURSOR = 73; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
