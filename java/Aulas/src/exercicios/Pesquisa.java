@@ -12,6 +12,7 @@ public class Pesquisa {
 		int ano;
 		int idade;
 		Scanner leia = new Scanner(System.in);
+		
 		System.out.println("Por favor insira seu nome: ");
 		nome = leia.next();
 		
