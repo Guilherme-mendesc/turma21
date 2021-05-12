@@ -1,28 +1,30 @@
 package CLASS;
 
 public class CAVALO extends ANIMAL {
-	private String correr = "Enquanto corria";
-	private String som ="POCOTÓ POCOTÓ POCOTÓ ";
+	private boolean corrida;
 	
-	public CAVALO(String nome, int idade, String correr) {
+	public CAVALO(String nome, int idade, boolean corrida) {
 		super(nome, idade);
-			
-
+		this.corrida=corrida;
+		
 }
 
-	public String getCorrer() {
-		return correr;
+	public boolean isCorrida() {
+		return corrida;
 	}
 
-	public void setCorrer(String correr) {
-		this.correr = correr;
+
+
+	public void setCorrida(boolean corrida) {
+		this.corrida = corrida;
 	}
 
-	public String getSom() {
-		return som;
-	}
 
-	public void setSom(String som) {
-		this.som = som;
-	}
+
+	@Override
+	public String somAnimal() {
+		super.setSom("pocotó pocotó pocotó minha éguinha pocotó");
+		return super.getSom();
+}
+
 }

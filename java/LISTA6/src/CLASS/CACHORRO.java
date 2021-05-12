@@ -2,27 +2,26 @@ package CLASS;
 
 public class CACHORRO extends ANIMAL {
 	
-	private String correr = "Enquanto corria";
-	private String som = "AUUUUUUUUUUUUUUUUU";
+	private boolean corrida;
 	
-	public CACHORRO(String nome, int idade, String correr) {
+	public CACHORRO(String nome, int idade, boolean corrida) {
 		super(nome,idade);
-		
-}
-
-	public String getCorrer() {
-		return correr;
+		this.corrida=corrida;
 	}
 
-	public void setCorrer(String correr) {
-		this.correr = correr;
+		public boolean isCorrida() {
+		return corrida;
 	}
 
-	public String getSom() {
-		return som;
+		public void setCorrida(boolean corrida) {
+		this.corrida = corrida;
 	}
 
-	public void setSom(String som) {
-		this.som = som;
-	}
+		@Override
+ 
+ 	public String somAnimal() {
+	 super.setSom("auuuuuuuuuuuuuuuuu");
+	 return super.getSom();
+	 
+ }
 }

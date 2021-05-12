@@ -4,6 +4,7 @@ public abstract class ANIMAL {
 	
 	private String nome;
 	private int idade;
+	private String som;
 	
 	public ANIMAL(String nome, int idade) {
 		super();
@@ -27,6 +28,23 @@ public abstract class ANIMAL {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+
+	public String getSom() {
+		return som;
+	}
+
+	public void setSom(String som) {
+		this.som = som;
+	}
+
+	public String somAnimal(){
+		som= "Som Animal";
+		return som;
+	}
+
+	
+	
+	
 	
 	
 

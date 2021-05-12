@@ -1,30 +1,30 @@
 package CLASS;
 
 public class PREGUICA extends ANIMAL {
-	private String escalada ="Enquanto subia na arvore";
-	private String som="zZzZzZzZzZ";
+	private boolean escalada;
 	
-	public PREGUICA(String nome, int idade, String escalada) {
+	public PREGUICA(String nome, int idade, boolean escalada) {
 		super(nome,idade);
+		this.escalada=escalada;
 	}
 
-	public String getEscalada() {
+	public boolean isEscalada() {
 		return escalada;
 	}
 
-	public void setEscalada(String escalada) {
+
+
+	public void setEscalada(boolean escalada) {
 		this.escalada = escalada;
 	}
 
-	public String getSom() {
-		return som;
-	}
 
-	public void setSom(String som) {
-		this.som = som;
-	}
-	
-	
+
+	@Override
+	public String somAnimal() {
+		super.setSom("zZzZzZzZzZzZzZzZzZZ");
+		return super.getSom();
+	}	
 	
 	
 	
