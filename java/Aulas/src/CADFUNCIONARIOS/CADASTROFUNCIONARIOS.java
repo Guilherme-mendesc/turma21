@@ -2,24 +2,34 @@ package CADFUNCIONARIOS;
 
 public class CADASTROFUNCIONARIOS {
 	
-	private String matricula;
-	private int horasTrab;
-	private double valorHora;
 	private String nome;
+	private String matricula;
+	protected int horasTrab;
+	protected double valorHora;
+	
 	
 
-	public CADASTROFUNCIONARIOS(String matricula, String nome) {
+	public CADASTROFUNCIONARIOS( String nome, String matricula) {
 		super();
-		this.matricula = matricula;
 		this.nome = nome;
+		this.matricula = matricula;
+		
 	}
 
 	
-	public CADASTROFUNCIONARIOS(String matricula, int horasTrab, double valorHora, String nome) {
+	public CADASTROFUNCIONARIOS(String nome, String matricula, int horasTrab, double valorHora) {
 		super();
+		this.nome = nome;
 		this.matricula = matricula;
 		this.horasTrab = horasTrab;
 		this.valorHora = valorHora;
+		
+	}
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
@@ -47,16 +57,10 @@ public class CADASTROFUNCIONARIOS {
 		this.valorHora = valorHora;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 	
-	public void mostrarSalario () {
-		System.out.println(horasTrab * valorHora);
+	
+	public double mostrarSalario () {
+		return (horasTrab*valorHora);
 	}
 	
 }
