@@ -94,7 +94,6 @@ public class Programa {
 				if(opcaoDoacao == '1') {
 					System.out.print("\nValor: ");
 					double valor = leia.nextDouble();
-					
 					adm.fazerDoacao(new Doacao(adm.getDoacoes().size() + 2,
 							valor, pessoa));
 					System.out.println("\nObrigado...");
