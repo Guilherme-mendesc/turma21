@@ -35,7 +35,7 @@ public class calculoRetangulo {
 			System.out.printf("O retangulo 2 tem a maior área. Área total de: %.2f", area2);
 			
 		}
-		
+		leia.close();
 	}
 			
 }

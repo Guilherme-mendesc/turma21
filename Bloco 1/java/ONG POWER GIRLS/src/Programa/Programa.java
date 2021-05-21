@@ -98,6 +98,7 @@ public class Programa {
 							valor, pessoa));
 					System.out.println("\nObrigado...");
 				} 
+				leia.close();
 			}
 		}
 	}
@@ -109,6 +110,7 @@ public class Programa {
 				return pessoa;
 			}
 		}
+	
 		return null;
 	}
 

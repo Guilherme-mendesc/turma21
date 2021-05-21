@@ -64,6 +64,7 @@ public class impostodeRenda {
 			else {
 				System.out.println("você é isente ");
 			}
+			leia.close();
 		}		
 }
 }

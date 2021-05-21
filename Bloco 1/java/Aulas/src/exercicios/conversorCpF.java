@@ -22,11 +22,11 @@ public class conversorCpF {
 		
 		gfahrenheit = (gcelcius * 9/5) + 32;
 		
-		
+		System.out.println(nome);
 		System.out.println("a temperatura em Graus Fahrenheit é: "+ gfahrenheit);
 		
 		
-				
+			leia.close();	
 		
 		
 		

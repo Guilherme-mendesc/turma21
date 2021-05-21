@@ -11,7 +11,7 @@ public static void main(String[] args) {
 			Scanner leia = new Scanner(System.in);
 				
 				
-					int numero=1, somatorio=0, media=0, totalValoresLidos=0, qtdVezes=0;
+					int numero=1, somatorio=0, media=0, totalValoresLidos=0;
 
 					while (numero != 0)
 					{
@@ -36,7 +36,7 @@ public static void main(String[] args) {
 					System.out.printf("\nA quantidade de vezes que foram informados numeros !=0 foi de: %d",totalValoresLidos);
 					System.out.printf("\nA média dos numeros informados é: %d", media);
 					 
-			
+			leia.close();
 			}
 
 	

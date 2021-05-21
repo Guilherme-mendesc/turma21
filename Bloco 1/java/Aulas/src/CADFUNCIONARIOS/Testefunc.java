@@ -52,7 +52,7 @@ public class Testefunc {
 		}
 		
 		
-		
+		leia.close();
 		
 	
 		

@@ -16,10 +16,11 @@ public class Façaenquanto {
 						num += 3;
 					}else { 
 						num +=5; 
-					
+					leia.close();
 						}
 				}
 				while(num <= 456); {
 			}
 		}
 }
+

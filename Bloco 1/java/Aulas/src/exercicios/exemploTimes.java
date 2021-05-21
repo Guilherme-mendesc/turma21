@@ -1,6 +1,6 @@
 package exercicios;
 
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class exemploTimes {
@@ -16,7 +16,7 @@ public class exemploTimes {
 			int pontos[] = {10,8,9,4};
 			String aux;
 			int indice=0;
-			char op;
+			
 			System.out.println("Relação de times");
 			for (String x : times) {
 				System.out.println(x);
@@ -39,7 +39,7 @@ public class exemploTimes {
 				System.out.println("Voce escolheu o "+nomes[indice]+" que tem "+pontos[indice]+" pontos");
 			}
 			
-			
+			leia.close();
 			
 
 		}
